@@ -1,0 +1,70 @@
+
+/*login*/
+
+#loginLiyout{
+    -fx-background-color: #333;
+}
+#loginLiyout Button{
+    -fx-background-radius: 20px;
+}
+
+#Textfield {
+    -fx-background-radius: 50px;
+}
+
+#loginLiyout Button{
+    -fx-background-radius: 20px;
+}
+
+/*Menu*/
+
+#slideRight{
+        -fx-background-color: #000;
+}
+
+#slideRight Button{
+    -fx-background-radius: 5px;
+}
+
+#statasta{
+        -fx-background-color: #CCC;
+}
+
+#AddBook{
+            -fx-background-color: #FFF;
+
+}
+
+
+/*Farm2*/
+
+#AnchorPane{
+    -fx-background-color: #FFF;
+}
+#AnchorPane Button{
+    -fx-background-radius: 20px;
+       -fx-background-color: #dddddd;
+
+}
+
+#malgah{
+    -fx-background-radius: 20px;
+
+}
+#monjz{
+    -fx-background-radius: 20px;
+}
+#motabaht{
+      -fx-background-radius: 20px;
+}
+
+#Textfield {
+    -fx-background-radius: 50px;
+}
+
+#AnchorPane Button{
+    -fx-background-radius: 20px;
+}
+
+/*Farm1*/
+

@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amleat_room.Farm22Controller">
+   <children>
+      <Pane prefHeight="719.0" prefWidth="1474.0">
+         <children>
+            <ComboBox fx:id="tayp_M" layoutX="1257.0" layoutY="95.0" prefHeight="25.0" prefWidth="70.0" promptText="..." />
+            <TextField fx:id="Jhah_M" alignment="CENTER_RIGHT" layoutX="1148.0" layoutY="95.0" prefHeight="25.0" prefWidth="105.0" promptText="الجهه">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1322.0" layoutY="228.0" text="الأهمـيـة" textFill="#8d0404">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="ahmeh_M" layoutX="1151.0" layoutY="223.0" prefHeight="25.0" prefWidth="164.0" promptText="..." />
+            <TextArea fx:id="ejra_M" layoutX="1149.0" layoutY="360.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="46.0" prefWidth="211.0" />
+            <Pane layoutY="5.0" prefHeight="365.0" prefWidth="145.0" style="-fx-background-color: #888;">
+               <children>
+                  <Label layoutX="47.0" layoutY="14.0" prefHeight="28.0" prefWidth="80.0" text="التقارير" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Ara Alharbi Alhanoof" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="20.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="105.0" stylesheets="@Style_Logein.css" text="طباعة كل المتابعات">
+                     <font>
+                        <Font name="Agency FB Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <TextField id="malgah" fx:id="M_ALL_not_monjz" alignment="CENTER" disable="true" layoutX="14.0" layoutY="290.0" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: #901;" stylesheets="@Style_Logein.css" text="00" />
+                  <TextField id="monjz" fx:id="M_ALL_monjz" alignment="CENTER" disable="true" layoutX="14.0" layoutY="256.0" prefHeight="25.0" prefWidth="46.0" style="-fx-background-color: greenyellow;" stylesheets="@Style_Logein.css" text="00" />
+                  <TextField id="motabaht" fx:id="M_ALL_mtabah" alignment="CENTER" disable="true" layoutX="14.0" layoutY="223.0" prefHeight="25.0" prefWidth="46.0" stylesheets="@Style_Logein.css" text="00" />
+                  <Label layoutX="63.0" layoutY="227.0" text="عدد المتابعات" textFill="WHITE" />
+                  <Label layoutX="68.0" layoutY="260.0" text="عدد المنجزة" textFill="WHITE" />
+                  <Label layoutX="67.0" layoutY="294.0" text="عدد المعلقة" textFill="WHITE" />
+                  <TextField id="motabaht" fx:id="M_ALL_malqe" alignment="CENTER" disable="true" layoutX="14.0" layoutY="324.0" prefHeight="25.0" prefWidth="46.0" stylesheets="@Style_Logein.css" text="00" />
+                  <Label layoutX="68.0" layoutY="328.0" text="عدد الملغية" textFill="WHITE" />
+                  <Button layoutX="13.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleButtonAction2" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="121.0" stylesheets="@Style_Logein.css" text="طباعة تقرير حسب الانجاز">
+                     <font>
+                        <Font name="Agency FB Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="12.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleButtonAction3" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="121.0" stylesheets="@Style_Logein.css" text="طباعة تقرير حسب اليوم">
+                     <font>
+                        <Font name="Agency FB Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" layoutY="280.0">
+                     <image>
+                        <Image url="@../asd.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" layoutX="1.0" layoutY="315.0">
+                     <image>
+                        <Image url="@../asd.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" layoutY="246.0">
+                     <image>
+                        <Image url="@../asd.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" layoutX="1.0" layoutY="212.0">
+                     <image>
+                        <Image url="@../asd.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="27.0" layoutY="19.0">
+                     <image>
+                        <Image url="@../printer.gif" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="M2" alignment="TOP_CENTER" layoutX="12.0" layoutY="170.0" prefHeight="25.0" prefWidth="123.0" promptText="ادخل نص التقرير" />
+               </children>
+            </Pane>
+            <Pane layoutY="506.0" prefHeight="219.0" prefWidth="145.0" style="-fx-background-color: #CCC;">
+               <children>
+                  <Label layoutX="28.0" layoutY="14.0" prefHeight="27.0" prefWidth="90.0" text="لوحة التنقل" textAlignment="CENTER">
+                     <font>
+                        <Font name="Ara Alharbi Alhanoof" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="28.0" layoutY="64.0" mnemonicParsing="false" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: #f7900e;" stylesheets="@Style_Logein.css" text="القائمة الرئيسية">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="18.0" layoutY="112.0" mnemonicParsing="false" onAction="#exit" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="30.0" prefWidth="110.0" stylesheets="@Style_Logein.css" textFill="#790404">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView layoutX="61.0" layoutY="115.0" onDragDetected="#exit" onMouseClicked="#exit">
+                     <image>
+                        <Image url="@../exit.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="7.0" layoutY="64.0" onMouseClicked="#login">
+                     <image>
+                        <Image url="@../home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane layoutY="375.0" prefHeight="125.0" prefWidth="145.0" style="-fx-background-color: #888;">
+               <children>
+                  <Button layoutX="35.0" layoutY="18.0" mnemonicParsing="false" onMouseEntered="#entred" onMouseExited="#exitedButtomUbdate" prefHeight="25.0" prefWidth="80.0" stylesheets="@Style_Logein.css" text="تحديث" />
+                  <Button layoutX="32.0" layoutY="70.0" mnemonicParsing="false" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="25.0" prefWidth="84.0" stylesheets="@Style_Logein.css" text="حفظ" />
+                  <ImageView fitHeight="23.0" fitWidth="22.0" layoutX="32.0" layoutY="71.0">
+                     <image>
+                        <Image url="@../saveFile.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="43.0" layoutY="23.0">
+                     <image>
+                        <Image url="@../loop.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane layoutX="145.0" layoutY="5.0" prefHeight="55.0" prefWidth="994.0" style="-fx-background-color: #888;">
+               <children>
+                  <Button layoutX="811.0" layoutY="15.0" mnemonicParsing="false" onAction="#SearchMtabah" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #dddddd;" text="بحث حسب" />
+                  <TextField fx:id="S_title_M" layoutX="681.0" layoutY="14.0" onAction="#SearchMtabah" prefHeight="27.0" prefWidth="138.0" promptText="نص الموضوع" style="-fx-border-color: #999;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="263.0" layoutY="15.0" mnemonicParsing="false" onAction="#SearchMtabah4" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #dddddd;" text="فرز حسب" />
+                  <TextField fx:id="S_ahmeh_M" layoutX="187.0" layoutY="14.0" onAction="#SearchMtabah4" prefHeight="25.0" prefWidth="84.0" promptText="الاهمية" style="-fx-border-color: #999;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="100.0" layoutY="15.0" mnemonicParsing="false" onAction="#SearchMtabah5" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #dddddd;" text="فرز حسب" />
+                  <TextField fx:id="S_tayp_M" layoutX="24.0" layoutY="14.0" onAction="#SearchMtabah5" prefHeight="25.0" prefWidth="84.0" promptText="صادر او وارد" style="-fx-border-color: #999;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="581.0" layoutY="16.0" mnemonicParsing="false" onAction="#SearchMtabah2" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #dddddd;" text="بحث حسب" />
+                  <TextField fx:id="S_num_M" layoutX="505.0" layoutY="15.0" onAction="#SearchMtabah2" prefHeight="25.0" prefWidth="84.0" promptText="رقم المتابعة" style="-fx-border-color: #999;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+                  <ImageView layoutX="898.0" layoutY="16.0">
+                     <image>
+                        <Image url="@../search.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="416.0" layoutY="16.0" mnemonicParsing="false" onAction="#SearchMtabah3" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #dddddd;" text="بحث حسب" />
+                  <TextField fx:id="S_da_M" layoutX="340.0" layoutY="15.0" onAction="#SearchMtabah3" prefHeight="25.0" prefWidth="84.0" promptText="التاريخ" style="-fx-border-color: #999;">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Label layoutX="1301.0" layoutY="322.0" text="مدة المتابعة">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="days_M" layoutX="1200.0" layoutY="317.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="58.0" promptText="00" text="0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1157.0" layoutY="322.0" text="ايـــام">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Pane layoutX="1138.0" layoutY="537.0" prefHeight="193.0" prefWidth="227.0" style="-fx-background-color: #CCC;">
+               <children>
+                  <Button layoutX="129.0" layoutY="53.0" mnemonicParsing="false" onAction="#updateMtabah" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FFF;" stylesheets="@Style_Logein.css" text="تعديل" />
+                  <Button layoutX="23.0" layoutY="53.0" mnemonicParsing="false" onAction="#delete" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: FFF;" stylesheets="@Style_Logein.css" text="حذف" />
+                  <Button layoutX="24.0" layoutY="87.0" mnemonicParsing="false" onAction="#Clear" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="25.0" prefWidth="185.0" style="-fx-background-color: FFF;" stylesheets="@Style_Logein.css" text="افراغ الحقول" />
+                  <Button layoutX="24.0" layoutY="20.0" mnemonicParsing="false" onAction="#insert_Mtabah" onMouseEntered="#entred" onMouseExited="#exited" prefHeight="25.0" prefWidth="185.0" style="-fx-background-color: #FFF;" stylesheets="@Style_Logein.css" text="اضافة">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="doneB" layoutX="106.0" layoutY="129.0" text="....." textFill="#1c4305">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView layoutX="179.0" layoutY="24.0" onDragDetected="#insert_Mtabah" onMouseClicked="#insert_Mtabah">
+                     <image>
+                        <Image url="@../ha_plus.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="188.0" layoutY="57.0">
+                     <image>
+                        <Image url="@../icon18_wrench_allbkg.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView layoutX="86.0" layoutY="57.0">
+                     <image>
+                        <Image url="@../ha_minus.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <TableView fx:id="TreeTableViewT" layoutX="159.0" layoutY="74.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#getselectedMtabah" prefHeight="228.0" prefWidth="971.0" style="-fx-border-color: #000033;" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="T_num_M" prefWidth="45.0" text="الرقم" />
+                  <TableColumn fx:id="T_da_M" prefWidth="75.0" text="التاريخ" />
+                  <TableColumn fx:id="T_tayp_M" prefWidth="47.0" text="النوع" />
+                  <TableColumn fx:id="T_Jhah_M" prefWidth="83.0" text="الجهه" />
+                  <TableColumn fx:id="T_title_M" prefWidth="165.0" text="الموضوع" />
+                  <TableColumn fx:id="T_ahmeh_M" prefWidth="53.0" text="الاهمية" />
+                  <TableColumn fx:id="T_mtaba_M" minWidth="0.0" text="المتابع" />
+                  <TableColumn fx:id="T_mstfed_M" minWidth="0.0" prefWidth="78.0" text="المستفيد" />
+                  <TableColumn fx:id="T_days_M" prefWidth="39.0" text="المدة" />
+                  <TableColumn fx:id="T_ejra_M" prefWidth="115.0" text="الاجراءات المتخذه" />
+                  <TableColumn fx:id="T_natg_M" prefWidth="43.0" text="الانجاز" />
+                  <TableColumn fx:id="T_natgfinl_M" prefWidth="76.0" text="النتيجة النهائية" />
+                  <TableColumn fx:id="T_nsbh_M" minWidth="4.0" prefWidth="62.0" text="نسبة الانجاز" />
+                  <TableColumn fx:id="T_mdah_M" prefWidth="99.0" text="ملاحظات" />
+               </columns>
+            </TableView>
+            <Label layoutX="998.0" layoutY="309.0" text="جدول المتابعات المعلقة :" textFill="#6f0303" />
+            <Label layoutX="999.0" layoutY="528.0" text="جدول المتابعات المنجزة :" textFill="#166e03" />
+            <TextField fx:id="nsbh_M" alignment="CENTER_RIGHT" layoutX="1236.0" layoutY="475.0" prefHeight="25.0" prefWidth="52.0" promptText="0" text="0" />
+            <TableView fx:id="TreeTableViewT1" layoutX="159.0" layoutY="329.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="193.0" prefWidth="971.0" style="-fx-border-color: #000033;" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="T_num_M1" prefWidth="47.0" text="الرقم" />
+                  <TableColumn fx:id="T_da_M1" prefWidth="72.0" text="التاريخ" />
+                  <TableColumn fx:id="T_tayp_M1" prefWidth="47.0" text="النوع" />
+                  <TableColumn fx:id="T_Jhah_M1" prefWidth="78.0" text="الجهه" />
+                  <TableColumn fx:id="T_title_M1" prefWidth="153.0" text="الموضوع" />
+                  <TableColumn fx:id="T_ahmeh_M1" prefWidth="56.0" text="الاهمية" />
+                  <TableColumn fx:id="T_mtaba_M1" minWidth="0.0" prefWidth="75.0" text="المتابع" />
+                  <TableColumn fx:id="T_mstfed_M1" minWidth="0.0" prefWidth="73.0" text="المستفيد" />
+                  <TableColumn fx:id="T_days_M1" prefWidth="44.0" text="المدة" />
+                  <TableColumn fx:id="T_ejra_M1" prefWidth="124.0" text="الاجراءات المتخذه" />
+                  <TableColumn fx:id="T_natg_M1" prefWidth="46.0" text="الانجاز" />
+                  <TableColumn fx:id="T_natgfinl_M1" prefWidth="75.0" text="النتيجة النهائية" />
+                  <TableColumn fx:id="T_nsbh_M1" minWidth="4.0" prefWidth="64.0" text="نسبة الانجاز" />
+                  <TableColumn fx:id="T_mdah_M1" prefWidth="106.0" text="ملاحظات" />
+               </columns>
+            </TableView>
+            <TableView fx:id="TreeTableViewT11" layoutX="159.0" layoutY="551.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="166.0" prefWidth="971.0" style="-fx-border-color: #000033;" tableMenuButtonVisible="true">
+               <columns>
+                  <TableColumn fx:id="T_num_M11" prefWidth="42.0" text="الرقم" />
+                  <TableColumn fx:id="T_da_M11" prefWidth="68.0" text="التاريخ" />
+                  <TableColumn fx:id="T_tayp_M11" prefWidth="42.0" text="النوع" />
+                  <TableColumn fx:id="T_Jhah_M11" prefWidth="92.0" text="الجهه" />
+                  <TableColumn fx:id="T_title_M11" prefWidth="136.0" text="الموضوع" />
+                  <TableColumn fx:id="T_ahmeh_M11" prefWidth="56.0" text="الاهمية" />
+                  <TableColumn fx:id="T_mtaba_M11" minWidth="0.0" prefWidth="79.0" text="المتابع" />
+                  <TableColumn fx:id="T_mstfed_M11" minWidth="0.0" prefWidth="76.0" text="المستفيد" />
+                  <TableColumn fx:id="T_days_M11" prefWidth="46.0" text="المدة" />
+                  <TableColumn fx:id="T_ejra_M11" prefWidth="138.0" text="الاجراءات المتخذه" />
+                  <TableColumn fx:id="T_natg_M11" prefWidth="46.0" text="الانجاز" />
+                  <TableColumn fx:id="T_natgfinl_M11" prefWidth="74.0" text="النتيجة النهائية" />
+                  <TableColumn fx:id="T_nsbh_M11" minWidth="4.0" prefWidth="63.0" text="نسبة الانجاز" />
+                  <TableColumn fx:id="T_mdah_M11" prefWidth="102.0" text="ملاحظات" />
+               </columns>
+            </TableView>
+            <TextField fx:id="num_M" alignment="CENTER_RIGHT" disable="true" layoutX="1148.0" layoutY="30.0" prefHeight="25.0" prefWidth="164.0" promptText="1+" text="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="da_M" alignment="CENTER_RIGHT" disable="true" layoutX="1148.0" layoutY="61.0" prefHeight="25.0" prefWidth="164.0" text="التاريخ المسجل في الجهاز">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1335.0" layoutY="101.0" text="النوع" textFill="#750202">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1307.0" layoutY="257.0" text="يـتـابـع عـبـر" textFill="#014268">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mtaba_M" layoutX="1150.0" layoutY="252.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="145.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1282.0" layoutY="288.0" text="الجهه المستفيدة">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mstfed_M" layoutX="1149.0" layoutY="285.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="126.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1270.0" layoutY="343.0" text="الاجراءات المتخذه :" textFill="#054772">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1332.0" layoutY="418.0" text="الانجاز" textFill="#5e0000">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="natg_M" layoutX="1151.0" layoutY="413.0" prefHeight="25.0" prefWidth="175.0" promptText="..." />
+            <Label layoutX="1297.0" layoutY="480.0" text="نسبة الانجـــاز">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1217.0" layoutY="483.0" text="\%">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1313.0" layoutY="509.0" text="ملاحظات">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mdah_M" layoutX="1147.0" layoutY="504.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="158.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Line endX="100.0" layoutX="1249.0" layoutY="536.0" startX="-100.0" />
+            <Line endX="-4.0" endY="-131.0" layoutX="1143.0" layoutY="132.0" startX="-4.0" startY="594.0" />
+         </children></Pane>
+      <Label layoutX="1309.0" layoutY="127.0" text="الموضوع :" textFill="#750303">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="1145.0" layoutY="7.0" prefHeight="28.0" prefWidth="200.0" text="أدخال متابعات الى قاعدة البيانات :-">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="1290.0" layoutY="448.0" text="النتيجة النهائية">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="natgfinl_M" layoutX="1150.0" layoutY="443.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="138.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <Line endX="-4.0" endY="-131.0" layoutX="1370.0" layoutY="147.0" startX="-4.0" startY="576.0" />
+      <TextArea fx:id="title_M" layoutX="1149.0" layoutY="144.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="76.0" prefWidth="211.0" />
+      <AnchorPane id="AnchorPane" fx:id="T2" layoutX="10.0" layoutY="10.0" prefHeight="719.0" prefWidth="1464.0" visible="false">
+         <children>
+            <Pane prefHeight="719.0" prefWidth="1370.0" />
+            <Pane fx:id="pane_Book1" layoutX="12.0" layoutY="42.0" prefHeight="609.0" prefWidth="842.0" AnchorPane.leftAnchor="12.0">
+               <children>
+                  <TableView fx:id="t_Book1" layoutX="95.0" layoutY="43.0" prefHeight="245.0" prefWidth="1008.0">
+                     <columns>
+                        <TableColumn prefWidth="96.0" text="ملاحظات" />
+                        <TableColumn minWidth="4.0" prefWidth="61.0" text="نسبة الانجاز" />
+                        <TableColumn prefWidth="43.0" text="الانجاز" />
+                        <TableColumn prefWidth="81.0" text="النتيجة النهائية" />
+                        <TableColumn prefWidth="118.0" text="الاجراءات المتخذه" />
+                        <TableColumn prefWidth="85.0" text="الجهه المستفيدة" />
+                        <TableColumn minWidth="0.0" prefWidth="0.0" text="التاريخ" />
+                        <TableColumn minWidth="0.0" prefWidth="63.0" text="اسم المتابع" />
+                        <TableColumn prefWidth="65.0" text="مدة المتابعة" />
+                        <TableColumn prefWidth="130.0" text="الموضوع" />
+                        <TableColumn prefWidth="69.0" text="الجهه" />
+                        <TableColumn prefWidth="51.0" text="النوع" />
+                        <TableColumn minWidth="0.0" prefWidth="42.0" text="القسم" />
+                        <TableColumn prefWidth="65.0" text="التاريخ" />
+                        <TableColumn prefWidth="34.0" text="الرقم" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="-7.0" layoutY="428.0" prefHeight="25.0" prefWidth="97.0" text="لوحة التنقل" textAlignment="CENTER">
+                     <font>
+                        <Font name="Ara Alharbi Alhanoof" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="-7.0" layoutY="462.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="المتابعة العملياتية">
+                     <font>
+                        <Font name=" Abdoullah Ashgar EL-kharef" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="9.0" layoutY="615.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="58.0" text="خروج">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="-7.0" layoutY="499.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="الموقف اليومي">
+                     <font>
+                        <Font name=" Abdoullah Ashgar EL-kharef" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="-7.0" layoutY="536.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="الداتا &quot; البريد &quot;">
+                     <font>
+                        <Font name=" Abdoullah Ashgar EL-kharef" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="-7.0" layoutY="575.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="المعلومات والاخبار">
+                     <font>
+                        <Font name=" Abdoullah Ashgar EL-kharef" size="10.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="411.0" layoutY="-18.0" prefHeight="37.0" prefWidth="227.0" text="...المتابعات العملياتية...">
+                     <font>
+                        <Font name="Ara Alharbi Alhanoof" size="25.0" />
+                     </font>
+                  </Label>
+                  <Line endX="-4.000030517578125" endY="123.0" layoutX="92.0" layoutY="-152.0" startX="-4.000030517578125" startY="444.0" />
+                  <Button layoutX="-7.0" layoutY="19.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="عارض الكل">
+                     <font>
+                        <Font name="Agency FB Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="-7.0" layoutY="63.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="عرض كل المنجزة">
+                     <font>
+                        <Font name="Agency FB Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="-7.0" layoutY="107.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="عرض الغير منجزة">
+                     <font>
+                        <Font name="Agency FB Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="7.0" layoutY="151.0" prefHeight="15.0" prefWidth="70.0" text="عدد المتابعات">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="17.0" layoutY="195.0" prefHeight="15.0" prefWidth="70.0" text="عدد المنجزة">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="242.0" prefHeight="15.0" prefWidth="70.0" text="عدد المعلقة">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Button layoutX="1143.0" layoutY="580.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="تعديل" />
+            <Button layoutX="1143.0" layoutY="612.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="حذف" />
+            <Button layoutX="1143.0" layoutY="644.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="افراغ الحقول" />
+            <ComboBox layoutX="1250.0" layoutY="115.0" prefHeight="25.0" prefWidth="51.0" />
+            <Label layoutX="1290.0" layoutY="147.0" text="الموضوع :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1283.0" layoutY="251.0" text="مدة المتابعة">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1221.0" layoutY="246.0" prefHeight="25.0" prefWidth="58.0" promptText="00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1193.0" layoutY="251.0" text="ايـــام">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1316.0" layoutY="57.0" text="الرقم">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="u_num_Book1" layoutX="1136.0" layoutY="50.0" prefHeight="25.0" prefWidth="164.0" promptText="00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1310.0" layoutY="85.0" text="التاريخ">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1136.0" layoutY="80.0" prefHeight="25.0" prefWidth="164.0" promptText="20__/00/00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1287.0" layoutY="281.0" text="اسم المتابع">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1133.0" layoutY="276.0" prefHeight="25.0" prefWidth="145.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1253.0" layoutY="341.0" text="الاجراءات المتخذه :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1133.0" layoutY="361.0" prefHeight="39.0" prefWidth="211.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1313.0" layoutY="442.0" text="الانجاز">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox layoutX="1134.0" layoutY="437.0" prefHeight="25.0" prefWidth="175.0" />
+            <TextField layoutX="1136.0" layoutY="115.0" prefHeight="25.0" prefWidth="110.0" promptText="الجهه">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="1143.0" layoutY="547.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="اضافة" />
+            <Line endX="-4.0" endY="-131.0" layoutX="1128.0" layoutY="135.0" startX="-4.0" startY="576.0" />
+            <Label fx:id="doneB1" layoutX="1161.0" layoutY="682.0" text="........................" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField layoutX="890.0" layoutY="659.0" prefHeight="25.0" prefWidth="52.0" promptText="الرقم">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="942.0" layoutY="659.0" mnemonicParsing="false" text="بحث حسب الرقم" />
+            <TextField layoutX="722.0" layoutY="659.0" prefHeight="25.0" prefWidth="84.0" promptText="صادر او وارد">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="806.0" layoutY="659.0" mnemonicParsing="false" text="فرز حسب" />
+            <TextField layoutX="527.0" layoutY="659.0" prefHeight="25.0" prefWidth="84.0" promptText="ـــــــــــــــــــــ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="611.0" layoutY="659.0" mnemonicParsing="false" text="بحث حسب الجهه" />
+            <Button layoutX="265.0" layoutY="659.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="طباعة" />
+            <Button layoutX="120.0" layoutY="659.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="126.0" text="حفظ" />
+            <Label layoutX="863.0" layoutY="350.0" prefHeight="28.0" prefWidth="253.0" text="المتابعات الغير منجزة &quot; المعلقة &quot; :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="976.0" layoutY="55.0" prefHeight="28.0" prefWidth="138.0" text="المتابعات المنجزة :">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="1152.0" layoutY="14.0" prefHeight="28.0" prefWidth="200.0" text="أدخال متابعات الى قاعدة البيانات :-">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Label>
+            <Line endX="-4.000030517578125" endY="313.0" layoutX="104.0" layoutY="152.0" startX="-4.0" startY="566.0" />
+            <Label layoutX="1265.0" layoutY="312.0" text="الجهه المستفيدة">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1132.0" layoutY="307.0" prefHeight="25.0" prefWidth="126.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1265.0" layoutY="410.0" text="النتيجة النهائية">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1132.0" layoutY="405.0" prefHeight="25.0" prefWidth="126.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1280.0" layoutY="479.0" text="نسبة الانجـــاز">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1218.0" layoutY="474.0" prefHeight="25.0" prefWidth="58.0" promptText="00">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="1202.0" layoutY="477.0" text="\%">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="1297.0" layoutY="509.0" text="ملاحظات">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1134.0" layoutY="504.0" prefHeight="25.0" prefWidth="158.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Line endX="100.0" layoutX="1236.0" layoutY="538.0" startX="-100.0" />
+            <Line endX="-4.0" endY="-131.0" layoutX="1356.0" layoutY="135.0" startX="-4.0" startY="576.0" />
+            <Label layoutX="1316.0" layoutY="120.0" text="النوع">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="23.0" prefHeight="27.0" prefWidth="51.0" text="التقارير" textAlignment="CENTER">
+               <font>
+                  <Font name="Ara Alharbi Alhanoof" size="19.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="1138.0" layoutY="166.0" prefHeight="76.0" prefWidth="201.0" />
+         </children>
+      </AnchorPane>
+      <Line endX="-4.0" endY="-131.0" layoutX="1384.0" layoutY="147.0" startX="-4.0" startY="576.0" />
+      <Label layoutX="1328.0" layoutY="66.0" text="التاريخ" textFill="#860202">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="1334.0" layoutY="35.0" text="الرقم" textFill="#7c0505">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
